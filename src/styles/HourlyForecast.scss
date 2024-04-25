@@ -1,0 +1,74 @@
+@import 'Variables'; 
+.hourly-table {
+    overflow: scroll;
+    width: 100%;
+    padding: 1rem;
+    
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    th, td {
+      text-align: left;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.7);
+  
+      @media screen and (min-width: 992px) {
+        font-size: 1.3rem;
+        padding: 0.6rem;
+  
+        &:not(:last-child) {
+          border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+  
+      @media screen and (max-width: 992px) {
+        font-size: 0.9rem; // Override for 'th'
+        padding: 0.3rem; // Override for 'th'
+  
+        &:not(:last-child) {
+          border-right: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+  
+      &{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  
+        @media screen and (max-width: 992px) {
+          border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+  
+    .weather {
+      min-width: 150px;
+    }
+  
+    .precipitation {
+      max-width: 100%;
+    }
+
+    &_weather-description{
+      align-items: center;
+      display: flex;
+      justify-content: start;
+
+      &_image{
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        object-fit: contain;
+        box-sizing: border-box; 
+        margin-right: 0.3rem;
+      }
+    }
+}
+  
